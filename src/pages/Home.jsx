@@ -21,7 +21,7 @@ const slides = [
   },
   {
     image: carousel1, // plane image
-    title: "Same-Day Local Courier",
+    title: "Domestic Air Express",
     subtitle:
       "Quick, reliable delivery across every street and neighborhood in your city.",
   },
