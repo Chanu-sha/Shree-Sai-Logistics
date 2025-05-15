@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../styles/Services.css";
-import servicesImage1 from "../assets/services-img-1.jpg";
+import servicesImage1 from "../assets/Services-img-1.jpg";
 import servicesImage2 from "../assets/Carousel-img-3.jpeg";
 import servicesImage3 from "../assets/Services-img-2.jpg";
 
