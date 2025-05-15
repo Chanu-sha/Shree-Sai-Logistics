@@ -1,0 +1,144 @@
+.blog-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 5%;
+  background-color: #f6f7fb;
+  min-height: 100vh;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.text-content {
+  max-width: 500px;
+  flex: 1;
+}
+
+.text-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1f1f1f;
+  margin-bottom: 20px;
+}
+
+.text-content p {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.learn-more-btn {
+  background-color: #2680eb;
+  color: #fff;
+  border: none;
+  padding: 14px 32px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.learn-more-btn:hover {
+  background-color: #1565c0;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.685);
+  border-radius: 10px;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Branches Table Section */
+.branches-table-section {
+  width: 100%;
+  padding: 60px 5%;
+  box-sizing: border-box;
+}
+
+.branches-table-section h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #1f1f1f;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.branches-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+}
+
+.branches-table th,
+.branches-table td {
+  border: 1px solid #ddd;
+  padding: 12px 16px;
+  text-align: center;
+}
+
+.branches-table th {
+  background-color: #2680eb;
+  color: #fff;
+  font-weight: 600;
+}
+
+.branches-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.branches-table tr:hover {
+  background-color: #e3f2fd;
+}
+
+@media (max-width: 1024px) {
+  .blog-hero {
+    flex-direction: column;
+    padding: 40px 5%;
+    text-align: center;
+  }
+
+  .text-content {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .text-content h1 {
+    font-size: 36px;
+  }
+
+  .text-content p {
+    font-size: 16px;
+  }
+
+  .image-container {
+    max-width: 100%;
+  }
+
+  .branches-table-section h2 {
+    font-size: 28px;
+  }
+
+  .branches-table th,
+  .branches-table td {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+}
