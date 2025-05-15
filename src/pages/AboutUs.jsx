@@ -1,4 +1,4 @@
-import "../styles/AboutUs.css";
+import "../styles/AboutUs.css"; 
 import AboutUsImg from "../assets/Carousel-img-5.jpg";
 
 const AboutUs = () => {
