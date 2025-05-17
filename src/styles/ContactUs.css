@@ -8,15 +8,6 @@
   overflow: hidden;
 }
 
-.contact-wrapper::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("/ContactUs-Bg.jpg") no-repeat center center / cover;
-  filter: blur(3px);
-  z-index: -1;
-}
-
 .contact-page {
   display: flex;
   gap: 30px;
