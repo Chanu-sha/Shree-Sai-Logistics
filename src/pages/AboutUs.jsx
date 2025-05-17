@@ -4,7 +4,6 @@ import AboutUsImg from "../assets/Carousel-img-5.jpg";
 const AboutUs = () => {
   return (
     <div className="about-page">
-      {/* About Hero Section */}
       <section className="about-hero">
         <div className="about-hero-overlay"></div>
         <div className="about-hero-content">
@@ -18,7 +17,6 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Who We Are */}
       <section className="who-we-are">
         <div className="text-content">
           <h4>WHO WE ARE</h4>
@@ -40,7 +38,6 @@ const AboutUs = () => {
           <img src={AboutUsImg} alt="Logistics" />
         </div>
       </section>
-      {/* Hero Section */}
       <section className="main-hero">
         <div className="main-hero-overlay"></div>
         <div className="main-hero-container">
@@ -85,7 +82,6 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Stats */}
       <section className="stats-section">
         <div className="stat-box">
           <h2>15</h2>

@@ -56,7 +56,6 @@
 
 
 
-/* Copyright section styles */
 .footer-copyright {
   text-align: center;
   padding: 20px 0;
@@ -65,7 +64,6 @@
   width: 100%;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .footer-container {
     grid-template-columns: 1fr 1fr;

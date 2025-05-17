@@ -26,7 +26,6 @@ const Branches = () => {
         <img src={blogpageimage} alt="Road-way-Logistic" />
       </div>
 
-      {/* Branches Table */}
       <div className="branches-table-section">
         <h2>Our Branches In Following States</h2>
         <div className="table-wrapper">

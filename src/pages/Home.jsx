@@ -14,44 +14,43 @@ const Home = () => {
 
 const slides = [
   {
-    image: carousel2, // plane image
+    image: carousel2, 
     title: "Priority Parcel Dispatch",
     subtitle:
       "Fast and secure parcel dispatch within the city, ensuring your packages reach without delays.",
   },
   {
-    image: carousel1, // plane image
+    image: carousel1, 
     title: "Domestic Air Express",
     subtitle:
       "Quick, reliable delivery across every street and neighborhood in your city.",
   },
   {
-    image: carousel4, // train image
+    image: carousel4, 
     title: "Statewide Cargo Transfers",
     subtitle:
       "Affordable and safe cargo transport between cities — on time, every time.",
   },
   {
-    image: carousel3, // train image
+    image: carousel3, 
     title: "Trusted City-to-City Logistics",
     subtitle:
       "Smooth goods movement from one city to another with guaranteed safety and punctuality.",
   },
   {
-    image: carousel6, // truck image
+    image: carousel6, 
     title: "Bulk Goods Delivery",
     subtitle:
       "Reliable transport for large consignments and multiple packages within the state.",
   },
   {
-    image: carousel5, // truck image
+    image: carousel5, 
     title: "Essential Package Transport",
     subtitle:
       "Fast, safe delivery of essential business and personal packages — handled with care.",
   },
 ];
 
-  // Auto slide change every 2 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);

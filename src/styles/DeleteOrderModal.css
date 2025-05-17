@@ -1,0 +1,82 @@
+.delete-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.delete-modal-container {
+  background: #fff;
+  padding: 24px 30px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.delete-modal-container h2 {
+  margin-bottom: 24px;
+  font-size: 20px;
+  color: #333;
+}
+
+.delete-modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.delete-modal-actions button {
+  padding: 10px 28px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-modal-actions button:first-child {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.delete-modal-actions button:first-child:hover {
+  background-color: #5a6268;
+}
+
+.delete-modal-actions button:last-child {
+  background-color: #d9534f;
+  color: #fff;
+}
+
+.delete-modal-actions button:last-child:hover {
+  background-color: #c9302c;
+}
+
+@media (max-width: 480px) {
+  .delete-modal-container {
+    padding: 18px 20px;
+  }
+
+  .delete-modal-actions {
+    flex-direction: column;
+  }
+
+  .delete-modal-actions button {
+    width: 100%;
+    padding: 12px 0;
+  }
+
+  .delete-modal-actions button + button {
+    margin-top: 12px;
+    gap: 0;
+  }
+}

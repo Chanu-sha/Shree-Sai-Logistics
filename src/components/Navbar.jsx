@@ -46,6 +46,9 @@ const Navbar = () => {
           <NavLink to="/branches" onClick={() => setIsMenuOpen(false)} className={({ isActive }) => isActive ? "active" : ""}>
             BRANCHES
           </NavLink>
+          <NavLink to="/tracking" onClick={() => setIsMenuOpen(false)} className={({ isActive }) => isActive ? "active" : ""}>
+            TRACKING
+          </NavLink>
           <NavLink to="/contactus" onClick={() => setIsMenuOpen(false)} className={({ isActive }) => isActive ? "active" : ""}>
             CONTACT
           </NavLink>

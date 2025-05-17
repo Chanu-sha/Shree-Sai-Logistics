@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import emailjs from "emailjs-com";
 import "../styles/ContactUs.css";
+import { toast } from "react-toastify";
 
 const ContactUs = () => {
   const form = useRef();
@@ -10,20 +11,30 @@ const ContactUs = () => {
 
     emailjs
       .sendForm(
-        import.meta.env.SERVICE_ID,  // service ID
-        import.meta.env.TEMPLATE_ID,  // template ID
+        import.meta.env.SERVICE_ID,
+        import.meta.env.TEMPLATE_ID,
         form.current,
-        import.meta.env.PUBLIC_KEY  // public key
+        import.meta.env.PUBLIC_KEY
       )
       .then(
         (result) => {
           console.log(result.text);
-          alert("Message sent successfully!");
+          toast.success("✅ Message sent successfully!", {
+            position: "top-center",
+            autoClose: 3000,
+            pauseOnHover: true,
+            draggable: true,
+          });
           form.current.reset();
         },
         (error) => {
           console.log(error.text);
-          alert("Failed to send message, please try again.");
+          toast.error("❌ Failed to send message, please try again.", {
+            position: "top-center",
+            autoClose: 3000,
+            pauseOnHover: true,
+            draggable: true,
+          });
         }
       );
   };
@@ -38,7 +49,12 @@ const ContactUs = () => {
             <input type="text" name="name" placeholder="Name*" required />
             <input type="email" name="email" placeholder="Email*" required />
             <input type="text" name="subject" placeholder="Subject*" required />
-            <textarea name="message" placeholder="Comment*" rows="5" required></textarea>
+            <textarea
+              name="message"
+              placeholder="Comment*"
+              rows="5"
+              required
+            ></textarea>
             <button type="submit">SUBMIT</button>
           </form>
         </div>

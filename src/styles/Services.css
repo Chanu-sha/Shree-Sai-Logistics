@@ -4,7 +4,6 @@
   background: #f9f9f9;
 }
 
-/* Header Section */
 .services-header {
   display: flex;
   flex-direction: column;
@@ -30,7 +29,6 @@
   color: #555;
 }
 
-/* Content Section */
 .services-container {
   display: flex;
   flex-wrap: wrap;
@@ -60,7 +58,6 @@
   border-radius: 10px;
 }
 
-/* Service List */
 .services-list {
   flex: 1;
   min-width: 320px;
@@ -101,7 +98,6 @@
   color: #fff;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .services-container {
     flex-direction: column;
@@ -119,7 +115,6 @@
   .services-header p {
     font-size: 0.95rem;
   }
-  /* Extra Responsive for small mobiles (320px - 480px) */
   @media (max-width: 480px) {
     .services-page {
       padding: 40px 10px;
