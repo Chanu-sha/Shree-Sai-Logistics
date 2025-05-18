@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shreesailogistics.in/sitemap.xml
