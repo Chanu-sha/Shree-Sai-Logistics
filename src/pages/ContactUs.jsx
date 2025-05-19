@@ -2,7 +2,6 @@ import { useRef } from "react";
 import emailjs from "emailjs-com";
 import "../styles/ContactUs.css";
 import { toast } from "react-toastify";
-import { Helmet } from "react-helmet-async";
 
 const ContactUs = () => {
   const form = useRef();
@@ -42,18 +41,6 @@ const ContactUs = () => {
 
   return (
     <div className="contact-wrapper">
-      <Helmet>
-        <title>Contact Us | Shree Sai Logistics</title>
-        <meta
-          name="description"
-          content="Get in touch with Shree Sai Logistics for reliable courier and cargo services across Odisha and India."
-        />
-        <meta
-          name="keywords"
-          content="Contact Logistics Bhubaneswar, Courier Support Odisha, Cargo Enquiry"
-        />
-      </Helmet>
-
       <div className="contact-page">
         <div className="form-section">
           <h4>OUR</h4>

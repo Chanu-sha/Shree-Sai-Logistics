@@ -8,7 +8,6 @@ import carousel4 from "../assets/Carousel-img-4.jpg";
 import carousel5 from "../assets/Carousel-img-5.jpg";
 import commitment from "../assets/Carousel-img-6.jpg";
 import carousel6 from "../assets/Services-img-2.jpg";
-import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -81,17 +80,7 @@ const Home = () => {
 
   return (
     <div>
-      <Helmet>
-        <title>Home | Shree Sai Logistics</title>
-        <meta
-          name="description"
-          content="Best logistics and courier service in Bhubaneswar, Odisha."
-        />
-        <meta
-          name="keywords"
-          content="Bhubneswar logistics ,Courier Bhubaneswar, Logistics Odisha, Same day delivery"
-        />
-      </Helmet>
+
       <section className="hero">
         <div className="hero-slides">
           {slides.map((slide, index) => (

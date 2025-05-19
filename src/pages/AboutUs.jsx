@@ -1,21 +1,9 @@
 import "../styles/AboutUS.css";
 import AboutUsImg from "../assets/Carousel-img-5.jpg";
-import { Helmet } from "react-helmet-async";
 
 const AboutUs = () => {
   return (
     <div className="about-page">
-      <Helmet>
-        <title>About Us | Shree Sai Logistics</title>
-        <meta
-          name="description"
-          content="Know more about Shree Sai Logistics and our services."
-        />
-        <meta
-          name="keywords"
-          content="About logistics Bhubaneswar, courier services Odisha"
-        />
-      </Helmet>
       <section className="about-hero">
         <div className="about-hero-overlay"></div>
         <div className="about-hero-content">
