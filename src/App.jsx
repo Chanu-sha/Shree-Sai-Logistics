@@ -13,12 +13,14 @@ import "react-toastify/dist/ReactToastify.css";
 import Tracking from "./pages/Tracking";
 import Admin from "./pages/Admin";
 import AdminLoginModal from "./components/AdminLoginModal";
+import { HelmetProvider } from "react-helmet-async";
 
 function App() {
   const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
+    <HelmetProvider>
     <OrderProvider>
       <Router>
         <Navbar />
@@ -60,6 +62,7 @@ function App() {
         />
       </Router>
     </OrderProvider>
+    </HelmetProvider>
   );
 }
 

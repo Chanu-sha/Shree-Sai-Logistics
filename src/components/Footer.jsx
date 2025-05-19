@@ -20,6 +20,9 @@ const Footer = () => {
               <Link to="/services">Services</Link>
             </li>
             <li>
+              <Link to="/tracking">Tracking</Link>
+            </li>
+            <li>
               <Link to="/contactus">Contactus</Link>
             </li>
           </ul>
@@ -61,7 +64,7 @@ const Footer = () => {
           <p>
             <strong>Office Hours:</strong>
             <br />
-            6:00Am to 10:00Pm
+            6:00AM to 10:00PM
           </p>
         </div>
 

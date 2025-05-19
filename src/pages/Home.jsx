@@ -8,48 +8,49 @@ import carousel4 from "../assets/Carousel-img-4.jpg";
 import carousel5 from "../assets/Carousel-img-5.jpg";
 import commitment from "../assets/Carousel-img-6.jpg";
 import carousel6 from "../assets/Services-img-2.jpg";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-const slides = [
-  {
-    image: carousel2, 
-    title: "Priority Parcel Dispatch",
-    subtitle:
-      "Fast and secure parcel dispatch within the city, ensuring your packages reach without delays.",
-  },
-  {
-    image: carousel1, 
-    title: "Domestic Air Express",
-    subtitle:
-      "Quick, reliable delivery across every street and neighborhood in your city.",
-  },
-  {
-    image: carousel4, 
-    title: "Statewide Cargo Transfers",
-    subtitle:
-      "Affordable and safe cargo transport between cities — on time, every time.",
-  },
-  {
-    image: carousel3, 
-    title: "Trusted City-to-City Logistics",
-    subtitle:
-      "Smooth goods movement from one city to another with guaranteed safety and punctuality.",
-  },
-  {
-    image: carousel6, 
-    title: "Bulk Goods Delivery",
-    subtitle:
-      "Reliable transport for large consignments and multiple packages within the state.",
-  },
-  {
-    image: carousel5, 
-    title: "Essential Package Transport",
-    subtitle:
-      "Fast, safe delivery of essential business and personal packages — handled with care.",
-  },
-];
+  const slides = [
+    {
+      image: carousel2,
+      title: "Priority Parcel Dispatch",
+      subtitle:
+        "Fast and secure parcel dispatch within the city, ensuring your packages reach without delays.",
+    },
+    {
+      image: carousel1,
+      title: "Domestic Air Express",
+      subtitle:
+        "Quick, reliable delivery across every street and neighborhood in your city.",
+    },
+    {
+      image: carousel4,
+      title: "Statewide Cargo Transfers",
+      subtitle:
+        "Affordable and safe cargo transport between cities — on time, every time.",
+    },
+    {
+      image: carousel3,
+      title: "Trusted City-to-City Logistics",
+      subtitle:
+        "Smooth goods movement from one city to another with guaranteed safety and punctuality.",
+    },
+    {
+      image: carousel6,
+      title: "Bulk Goods Delivery",
+      subtitle:
+        "Reliable transport for large consignments and multiple packages within the state.",
+    },
+    {
+      image: carousel5,
+      title: "Essential Package Transport",
+      subtitle:
+        "Fast, safe delivery of essential business and personal packages — handled with care.",
+    },
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -80,6 +81,17 @@ const slides = [
 
   return (
     <div>
+      <Helmet>
+        <title>Home | Shree Sai Logistics</title>
+        <meta
+          name="description"
+          content="Best logistics and courier service in Bhubaneswar, Odisha."
+        />
+        <meta
+          name="keywords"
+          content="Bhubneswar logistics ,Courier Bhubaneswar, Logistics Odisha, Same day delivery"
+        />
+      </Helmet>
       <section className="hero">
         <div className="hero-slides">
           {slides.map((slide, index) => (
@@ -137,7 +149,7 @@ const slides = [
             </button>
           </div>
           <div className="commitment-image">
-            <img src={commitment } />
+            <img src={commitment} />
           </div>
         </div>
       </section>

@@ -3,6 +3,7 @@ import "../styles/Services.css";
 import servicesImage1 from "../assets/Services-img-1.jpg";
 import servicesImage2 from "../assets/Carousel-img-3.jpeg";
 import servicesImage3 from "../assets/Services-img-2.jpg";
+import { Helmet } from "react-helmet-async";
 
 const Services = () => {
   const [activeService, setActiveService] = useState("truck");
@@ -27,6 +28,17 @@ const Services = () => {
 
   return (
     <div className="services-page">
+      <Helmet>
+        <title>Services | Shree Sai Logistics</title>
+        <meta
+          name="description"
+          content="Explore a wide range of courier, cargo, and logistics services by Shree Sai Logistics for fast, reliable delivery solutions."
+        />
+        <meta
+          name="keywords"
+          content="Logistics Services Bhubaneswar, Cargo Delivery Odisha, Parcel Services"
+        />
+      </Helmet>
       <div className="services-header">
         <h4>Our Services</h4>
         <h2>We Have Everything</h2>
