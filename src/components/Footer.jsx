@@ -54,7 +54,7 @@ const Footer = () => {
           <p>
             <strong>Address:</strong>
             <br />
-            Plot No. 1518, BONTH, BHADRAK, ODISSA, Pin:-756114
+            Plot No. 1518, BONTH, BHADRAK, ODISHA, Pin:-756114
           </p>
           <p>
             <strong>Phone:</strong><br /> +91 7077439999
@@ -64,7 +64,7 @@ const Footer = () => {
           <p>
             <strong>Office Hours:</strong>
             <br />
-            6:00AM to 10:00PM
+            9:00AM to 9:00PM
           </p>
         </div>
 
