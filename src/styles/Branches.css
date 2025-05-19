@@ -76,11 +76,15 @@
 }
 
 .table-wrapper {
+  width: 100%;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 8px;
 }
 
 .branches-table {
   width: 100%;
+  min-width: 600px;
   border-collapse: collapse;
   margin: auto;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -98,6 +102,8 @@
   background-color: #2680eb;
   color: #fff;
   font-weight: 600;
+  position: sticky;
+  top: 0;
 }
 
 .branches-table tr:nth-child(even) {
@@ -108,6 +114,7 @@
   background-color: #e3f2fd;
 }
 
+/* Responsive adjustments */
 @media (max-width: 1024px) {
   .blog-hero {
     flex-direction: column;
@@ -135,10 +142,102 @@
   .branches-table-section h2 {
     font-size: 28px;
   }
+}
 
-  .branches-table th,
+@media (max-width: 768px) {
+  .text-content h1 {
+    font-size: 32px;
+  }
+
+  .branches-table-section h2 {
+    font-size: 24px;
+  }
+
+  /* Mobile table styles */
+  .branches-table {
+    min-width: unset;
+    width: 100%;
+  }
+  
+  .branches-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  
+  .branches-table tr {
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .branches-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+    padding: 12px 15px;
+    border: none;
+    border-bottom: 1px solid #eee;
+    white-space: normal;
+  }
+  
+  .branches-table td:last-child {
+    border-bottom: none;
+  }
+  
+  .branches-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #2680eb;
+    margin-right: 15px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-hero {
+    padding: 30px 5%;
+  }
+
+  .text-content h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .text-content p {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .learn-more-btn {
+    padding: 12px 24px;
+  }
+
+  .branches-table-section {
+    padding: 40px 5%;
+  }
+
+  .branches-table-section h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
   .branches-table td {
     padding: 10px 12px;
     font-size: 14px;
+  }
+  
+  .branches-table td::before {
+    font-size: 14px;
+    margin-right: 10px;
   }
 }

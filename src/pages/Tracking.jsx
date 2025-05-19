@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../styles/Tracking.css";
 import TrackingImage from "../assets/TrackingPageImage.png";
 import AdminLoginModal from "../components/AdminLoginModal";
@@ -20,6 +20,16 @@ const Tracking = ({ setIsAdminLoggedIn }) => {
     setIsAdminLoggedIn(true);
     closeModal();
   };
+  useEffect(() => {
+    document.title = "Track Your Consignment | Shree Sai Logistics";
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) {
+      meta.setAttribute(
+        "content",
+        "Track your consignments easily with Shree Sai Logistics tracking service. Enter your consignment number to check status."
+      );
+    }
+  }, []);
 
   const handleTrack = async () => {
     if (!consignmentNo.trim()) return;
@@ -56,7 +66,10 @@ const Tracking = ({ setIsAdminLoggedIn }) => {
   return (
     <div className="tracking-section">
       <div className="tracking-topbar">
-        <button className="admin-login-btn" onClick={() => setIsModalOpen(true)}>
+        <button
+          className="admin-login-btn"
+          onClick={() => setIsModalOpen(true)}
+        >
           Admin Login
         </button>
       </div>
@@ -79,10 +92,14 @@ const Tracking = ({ setIsAdminLoggedIn }) => {
               value={consignmentNo}
               onChange={(e) => setConsignmentNo(e.target.value)}
             />
-            <button onClick={handleTrack}>{loading ? "Tracking..." : "Submit"}</button>
+            <button onClick={handleTrack}>
+              {loading ? "Tracking..." : "Submit"}
+            </button>
           </div>
 
-          {loading && <p style={{ marginTop: "1rem" }}>Fetching order details...</p>}
+          {loading && (
+            <p style={{ marginTop: "1rem" }}>Fetching order details...</p>
+          )}
 
           {!loading && order && (
             <div className="order-result">
@@ -106,7 +123,11 @@ const Tracking = ({ setIsAdminLoggedIn }) => {
                     <td>{order.origin}</td>
                     <td>{order.destination}</td>
                     <td>{order.status}</td>
-                    <td>{new Date(order.expectedDeliveryDate).toLocaleDateString()}</td>
+                    <td>
+                      {new Date(
+                        order.expectedDeliveryDate
+                      ).toLocaleDateString()}
+                    </td>
                     <td>{order.expectedDelivery}</td>
                     <td>
                       <button className="view-btn" onClick={handleViewImage}>
@@ -120,7 +141,9 @@ const Tracking = ({ setIsAdminLoggedIn }) => {
           )}
 
           {!loading && notFound && (
-            <h3 style={{ marginTop: "1rem", color: "#dc2626" }}>No order found!</h3>
+            <h3 style={{ marginTop: "1rem", color: "#dc2626" }}>
+              No order found!
+            </h3>
           )}
 
           <div className="tracking-perks">
@@ -139,7 +162,10 @@ const Tracking = ({ setIsAdminLoggedIn }) => {
       </div>
 
       {showImageModal && (
-        <div className="fullscreen-image-modal" onClick={() => setShowImageModal(false)}>
+        <div
+          className="fullscreen-image-modal"
+          onClick={() => setShowImageModal(false)}
+        >
           <span className="close-btn">&times;</span>
           <img src={imageToShow} alt="Order" />
         </div>

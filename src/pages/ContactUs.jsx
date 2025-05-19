@@ -1,9 +1,19 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import emailjs from "emailjs-com";
 import "../styles/ContactUs.css";
 import { toast } from "react-toastify";
 
 const ContactUs = () => {
+  useEffect(() => {
+    document.title = "Contact | Shree Sai Logistics";
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) {
+      meta.setAttribute(
+        "content",
+        "Get in touch with Shree Sai Logistics. Call +91 7077439999 or email shreesailogistics19@gmail.com."
+      );
+    }
+  }, []);
   const form = useRef();
 
   const sendEmail = (e) => {

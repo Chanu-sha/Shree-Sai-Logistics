@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../styles/Services.css";
 import servicesImage1 from "../assets/Services-img-1.jpg";
 import servicesImage2 from "../assets/Carousel-img-3.jpeg";
@@ -24,6 +24,16 @@ const Services = () => {
       desc: "It is one of the most common methods of shipping, especially for domestic or short-distance loadposts.",
     },
   };
+  useEffect(() => {
+    document.title = "Services | Shree Sai Logistics";
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) {
+      meta.setAttribute(
+        "content",
+        "Explore our logistics services like Customs Clearance, Surface Express, Air Domestic Express, and more."
+      );
+    }
+  }, []);
 
   return (
     <div className="services-page">

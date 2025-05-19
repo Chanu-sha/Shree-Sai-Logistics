@@ -1,7 +1,18 @@
 import "../styles/AboutUS.css";
 import AboutUsImg from "../assets/Carousel-img-5.jpg";
+import { useEffect } from "react";
 
 const AboutUs = () => {
+  useEffect(() => {
+    document.title = "About | Shree Sai Logistics";
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) {
+      meta.setAttribute(
+        "content",
+        "Learn about Shree Sai Logistics, a leading Bhubaneswar-based logistics company delivering across India."
+      );
+    }
+  }, []);
   return (
     <div className="about-page">
       <section className="about-hero">

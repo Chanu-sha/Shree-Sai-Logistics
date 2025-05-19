@@ -77,10 +77,19 @@ const Home = () => {
   const handleBLearnMoreClick = () => {
     navigate("/services");
   };
+  useEffect(() => {
+    document.title = "Shree Sai Logistics | Bhubaneswar Logistics Company";
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) {
+      meta.setAttribute(
+        "content",
+        "Shree Sai Logistics is a Bhubaneswar-based logistics company delivering across India with expert logistics services."
+      );
+    }
+  }, []);
 
   return (
     <div>
-
       <section className="hero">
         <div className="hero-slides">
           {slides.map((slide, index) => (
