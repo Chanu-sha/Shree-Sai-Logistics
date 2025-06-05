@@ -147,7 +147,7 @@ const Home = () => {
             </button>
           </div>
           <div className="commitment-image">
-            <img src={commitment} />
+            <img src={commitment} loading="lazy" />
           </div>
         </div>
       </section>

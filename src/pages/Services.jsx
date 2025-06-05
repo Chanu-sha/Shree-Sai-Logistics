@@ -49,7 +49,7 @@ const Services = () => {
 
       <div className="services-container">
         <div className="services-image">
-          <img src={serviceData[activeService].image} alt="Service" />
+          <img src={serviceData[activeService].image} alt="Service" loading="lazy" />
         </div>
 
         <div className="services-list">

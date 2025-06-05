@@ -164,7 +164,7 @@ const Admin = () => {
       {showImageModal && (
         <div className="fullscreen-image-modal" onClick={() => setShowImageModal(false)}>
           <span className="close-btn">&times;</span>
-          <img src={imageToShow} alt="Order" />
+          <img src={imageToShow} alt="Order" loading="lazy" />
         </div>
       )}
 

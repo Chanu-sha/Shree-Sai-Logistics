@@ -74,6 +74,7 @@ const Footer = () => {
             <img
               src="/F-Logo.png"
               alt="SHREE SAI LOGISTICS"
+              loading="lazy"
             />
           </Link>
         </div>

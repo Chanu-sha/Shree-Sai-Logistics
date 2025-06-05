@@ -1,5 +1,7 @@
 import "../styles/AboutUS.css";
 import AboutUsImg from "../assets/Carousel-img-5.jpg";
+import AboutHeroImg from "../assets/AboutUs-img-1.jpeg";
+import MainHeroImg from "../assets/Carousel-img-2.jpeg";
 import { useEffect } from "react";
 
 const AboutUs = () => {
@@ -13,9 +15,16 @@ const AboutUs = () => {
       );
     }
   }, []);
+
   return (
     <div className="about-page">
       <section className="about-hero">
+        <img
+          src={AboutHeroImg}
+          alt="About Hero"
+          className="hero-bg-img"
+          loading="lazy"
+        />
         <div className="about-hero-overlay"></div>
         <div className="about-hero-content">
           <h1>About SHREE SAI LOGISTICS</h1>
@@ -46,10 +55,17 @@ const AboutUs = () => {
           </p>
         </div>
         <div className="image-content">
-          <img src={AboutUsImg} alt="Logistics" />
+          <img src={AboutUsImg} alt="Logistics" loading="lazy" />
         </div>
       </section>
+
       <section className="main-hero">
+        <img
+          src={MainHeroImg}
+          alt="Main Hero"
+          className="hero-bg-img"
+          loading="lazy"
+        />
         <div className="main-hero-overlay"></div>
         <div className="main-hero-container">
           <div className="hero-headings">
@@ -57,6 +73,7 @@ const AboutUs = () => {
             <h2>Guided by Purpose, Driven by Excellence</h2>
           </div>
           <div className="core-values-grid">
+            {/* Value boxes same as before */}
             <div className="value-box">
               <div className="value-icon">🚚</div>
               <h3>Reliability</h3>

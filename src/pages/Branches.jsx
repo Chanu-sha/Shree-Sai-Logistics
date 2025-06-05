@@ -51,7 +51,7 @@ const Branches = () => {
       </div>
 
       <div className="image-container">
-        <img src={blogpageimage} alt="Road-way-Logistic" />
+        <img src={blogpageimage} alt="Road-way-Logistic" loading="lazy" />
       </div>
 
       <div className="branches-table-section">

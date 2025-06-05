@@ -157,6 +157,7 @@ const Tracking = ({ setIsAdminLoggedIn }) => {
             src={TrackingImage}
             alt="Tracking Illustration"
             className="tracking-image"
+            loading="lazy"
           />
         </div>
       </div>
@@ -167,7 +168,7 @@ const Tracking = ({ setIsAdminLoggedIn }) => {
           onClick={() => setShowImageModal(false)}
         >
           <span className="close-btn">&times;</span>
-          <img src={imageToShow} alt="Order" />
+          <img src={imageToShow} alt="Order" loading="lazy" />
         </div>
       )}
 

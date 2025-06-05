@@ -18,6 +18,7 @@ const Navbar = () => {
               src="/N-Logo.png"
               alt="SHREE SAI LOGISTICS"
               className="logo-img"
+              loading="lazy"
             />
           </NavLink>
         </div>
