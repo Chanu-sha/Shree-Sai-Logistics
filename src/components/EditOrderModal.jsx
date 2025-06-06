@@ -169,7 +169,6 @@ const EditOrderModal = ({ onClose, orderData }) => {
                       <option value="" disabled>
                         Select
                       </option>
-                      <option value="Accepted">Accepted</option>
                       <option value="Pending">Pending</option>
                       <option value="Completed">Completed</option>
                       <option value="Cancelled">Cancelled</option>
