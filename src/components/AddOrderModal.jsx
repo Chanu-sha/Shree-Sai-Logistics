@@ -184,12 +184,14 @@ const AddOrderModal = ({ onClose }) => {
                     />
                   </td>
                   <td>
-                    <input
-                      type="file"
-                      accept="image/*"
-                      onChange={handleImageChange}
-                      required
-                    />
+                    {formData.status === "Completed" && (
+                      <input
+                        type="file"
+                        accept="image/*"
+                        onChange={handleImageChange}
+                        required
+                      />
+                    )}
                   </td>
                 </tr>
               </tbody>
