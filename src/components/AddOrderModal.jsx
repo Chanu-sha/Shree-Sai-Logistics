@@ -36,17 +36,26 @@ const AddOrderModal = ({ onClose }) => {
     }));
   };
 
+  const formatDateToDDMMYYYY = (dateString) => {
+    if (!dateString) return "";
+    const [year, month, day] = dateString.split("-");
+    return `${day}-${month}-${year}`;
+  };
+
   const handleConfirm = async () => {
     setLoading(true);
 
     try {
       const data = new FormData();
       data.append("consignmentNo", formData.consignmentNo);
-      data.append("bookingDate", formData.bookingDate);
+      data.append("bookingDate", formatDateToDDMMYYYY(formData.bookingDate));
       data.append("origin", formData.origin);
       data.append("destination", formData.destination);
       data.append("status", formData.status);
-      data.append("expectedDeliveryDate", formData.expectedDeliveryDate);
+      data.append(
+        "expectedDeliveryDate",
+        formatDateToDDMMYYYY(formData.expectedDeliveryDate)
+      );
       data.append("expectedDelivery", formData.expectedDelivery);
       if (formData.detailsImage) {
         data.append("detailsImage", formData.detailsImage);

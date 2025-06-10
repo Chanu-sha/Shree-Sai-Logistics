@@ -20,17 +20,17 @@ export const OrderProvider = ({ children }) => {
       setLoading(false);
     }
   };
-const deleteOrder = async (consignmentNo) => {
-  try {
-    await apiDeleteOrder(consignmentNo);
-    setOrders((prevOrders) =>
-      prevOrders.filter((order) => order.consignmentNo !== consignmentNo)
-    );
-  } catch (error) {
-    console.error("Error deleting order:", error);
-  }
-};
 
+  const deleteOrder = async (consignmentNo) => {
+    try {
+      await apiDeleteOrder(consignmentNo);
+      setOrders((prevOrders) =>
+        prevOrders.filter((order) => order.consignmentNo !== consignmentNo)
+      );
+    } catch (error) {
+      console.error("Error deleting order:", error);
+    }
+  };
 
   useEffect(() => {
     fetchOrders();
