@@ -119,15 +119,11 @@ const Tracking = ({ setIsAdminLoggedIn }) => {
                 <tbody>
                   <tr>
                     <td>{order.consignmentNo}</td>
-                    <td>{new Date(order.createdAt).toLocaleDateString()}</td>
+                    <td>{order.bookingDate}</td>
                     <td>{order.origin}</td>
                     <td>{order.destination}</td>
                     <td>{order.status}</td>
-                    <td>
-                      {new Date(
-                        order.expectedDeliveryDate
-                      ).toLocaleDateString()}
-                    </td>
+                    <td>{order.expectedDeliveryDate}</td>
                     <td>{order.expectedDelivery}</td>
                     <td>
                       <button className="view-btn" onClick={handleViewImage}>
