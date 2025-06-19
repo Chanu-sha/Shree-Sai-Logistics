@@ -103,7 +103,7 @@ const Tracking = ({ setIsAdminLoggedIn }) => {
 
           {!loading && order && (
             <div className="order-result">
-              <table>
+              <table className="trackingtable" >
                 <thead>
                   <tr>
                     <th>Consignment Number</th>
@@ -118,13 +118,13 @@ const Tracking = ({ setIsAdminLoggedIn }) => {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>{order.consignmentNo}</td>
-                    <td>{order.bookingDate}</td>
-                    <td>{order.origin}</td>
-                    <td>{order.destination}</td>
-                    <td>{order.status}</td>
-                    <td>{order.expectedDeliveryDate}</td>
-                    <td>{order.expectedDelivery}</td>
+                    <td >{order.consignmentNo}</td>
+                    <td >{order.bookingDate}</td>
+                    <td >{order.origin}</td>
+                    <td >{order.destination}</td>
+                    <td >{order.status}</td>
+                    <td >{order.expectedDeliveryDate}</td>
+                    <td >{order.expectedDelivery}</td>
                     <td>
                       <button className="view-btn" onClick={handleViewImage}>
                         View

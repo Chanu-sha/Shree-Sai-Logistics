@@ -165,6 +165,9 @@
   background-color: #0e5e5a;
 }
 
+.trackingtable td{
+  text-align: center;
+}
 
 .fullscreen-image-modal {
   position: fixed;
