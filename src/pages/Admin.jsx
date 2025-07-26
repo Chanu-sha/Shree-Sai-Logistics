@@ -19,9 +19,13 @@ const Admin = () => {
   const [showImageModal, setShowImageModal] = useState(false);
   const [imageToShow, setImageToShow] = useState("");
 
-  const filteredOrders = orders.filter((order) =>
-    order.consignmentNo?.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredOrders = [...orders]
+    .filter((order) =>
+      order.consignmentNo?.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    .sort(
+      (a, b) => Number(b.consignmentNo) - Number(a.consignmentNo) // ✅ sort latest to oldest
+    );
 
   const handleAddOrder = () => {
     setShowAddModal(true);
@@ -162,7 +166,10 @@ const Admin = () => {
       )}
 
       {showImageModal && (
-        <div className="fullscreen-image-modal" onClick={() => setShowImageModal(false)}>
+        <div
+          className="fullscreen-image-modal"
+          onClick={() => setShowImageModal(false)}
+        >
           <span className="close-btn">&times;</span>
           <img src={imageToShow} alt="Order" loading="lazy" />
         </div>
