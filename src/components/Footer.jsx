@@ -54,7 +54,7 @@ const Footer = () => {
           <p>
             <strong>Address:</strong>
             <br />
-            Plot No. 1518, BONTH, BHADRAK, ODISHA, Pin:-756114
+             REGD. OFFICE No. 1518, BONTH, BHADRAK, ODISHA, Pin:-756114
           </p>
           <p>
             <strong>Phone:</strong><br /> +91 7077439999
